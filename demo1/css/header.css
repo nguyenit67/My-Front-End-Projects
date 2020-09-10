@@ -1,0 +1,66 @@
+/* *************** */
+/* SECTION TOP-BAR */
+
+.top-bar {
+  padding: 1rem 0;
+  background-color: deeppink;
+}
+
+/* SOCIAL LIST */
+.top-bar__social-list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+.top-bar__social-list > li {
+  margin-right: 3rem;
+}
+
+.top-bar__social-list > li > a {
+  color: white;
+}
+
+/* LINKS */
+.top-bar__links > a,
+.top-bar__links > span {
+  color: white;
+}
+
+/* *********** */
+/* NAV TOP-NAV */
+.top-nav {
+    padding: 1rem 0;
+    background-color: white;
+}
+
+/* TOP-NAV LOGO */
+.top-nav__logo {
+}
+
+/* TOP-NAV MENU */
+.top-nav__menu {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.top-nav__menu > li {
+    margin: 0 1rem;
+}
+.top-nav__menu > li > a {
+    color: rgb(82, 82, 82);
+}
+.top-nav__menu > li > a.current-page {
+}
+
+/* TOP-NAV SEARCH */
+.top-nav__search {
+    background-color: deeppink;
+    width: 2rem;
+}
+.top-nav__search > i {
+    color: white;
+}

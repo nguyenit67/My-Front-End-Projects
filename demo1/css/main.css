@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* FONTS  */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* layout define */
+/* 
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem 0 5rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ */
