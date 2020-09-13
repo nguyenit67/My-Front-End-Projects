@@ -1,3 +1,5 @@
+/* styles for HEADER of EVERY PAGE */
+
 /* *************** */
 /* SECTION TOP-BAR */
 
@@ -17,7 +19,7 @@
   list-style-type: none;
 }
 .top-bar__social-list > li {
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 
 .top-bar__social-list > li > a {
@@ -33,34 +35,42 @@
 /* *********** */
 /* NAV TOP-NAV */
 .top-nav {
-    padding: 1rem 0;
-    background-color: white;
+  padding: 1rem 0;
+  background-color: white;
 }
 
 /* TOP-NAV LOGO */
 .top-nav__logo {
+  width: 7.5rem;
 }
 
 /* TOP-NAV MENU */
 .top-nav__menu {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 8rem;
 }
 .top-nav__menu > li {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 .top-nav__menu > li > a {
-    color: rgb(82, 82, 82);
+  color: rgb(82, 82, 82);
 }
 .top-nav__menu > li > a.current-page {
+  color: deeppink;
 }
 
 /* TOP-NAV SEARCH */
 .top-nav__search {
-    background-color: deeppink;
-    width: 2rem;
+  background-color: deeppink;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 0.3rem;
+  text-align: center;
 }
+
 .top-nav__search > i {
-    color: white;
+  color: white;
 }

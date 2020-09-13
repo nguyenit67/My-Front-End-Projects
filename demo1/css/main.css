@@ -1,3 +1,5 @@
+/* styles for FOR EVERY PAGE */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +12,23 @@ body {
 }
 
 /* layout define */
-/* 
 .container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 5rem 0 5rem;
+    --padding-side: 2rem;
+    padding-left: var(--padding-side);
+    padding-right: var(--padding-side);
 }
 
+/* 
 .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
  */
+
+button {
+    background-color: deeppink;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+}

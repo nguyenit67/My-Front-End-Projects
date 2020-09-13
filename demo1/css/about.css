@@ -1,0 +1,48 @@
+/* styles for MAIN CONTENT OF ABOUT.html */
+
+/* HERO */
+
+.hero > .container-fluid {
+  background-image: url("/demo1/images/page-top-bg.jpg");
+  background-size: 132%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-position: left top; */
+  height: 215px;
+  /* padding: auto; */
+  display: flex;
+  /* width: auto; */
+}
+
+.hero .hero__title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  background-color: deeppink;
+  max-width: max-content;
+  max-height: max-content;
+  padding: .2rem 2rem;
+
+  margin: auto;
+  border-radius: 5px;
+}
+
+/* ABOUT CONTENT */
+
+.about {
+  margin: 6rem 0;
+}
+.about__content {
+}
+
+.about__title {
+  font-weight: bold;
+  margin-bottom: 75px;
+}
+.about__description {
+  margin-bottom: 55px;
+}
+
+.about__thumbnail {
+  width: 530px;
+}

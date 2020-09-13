@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
 
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
     <!-- Insert Bootstrap here -->
     <link
       rel="stylesheet"
@@ -25,8 +27,11 @@
       rel="stylesheet"
     />
 
+    <!-- custom css here -->
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
   </head>
   <body>
     <header>
@@ -36,7 +41,7 @@
             <div class="col-auto">
               <ul class="top-bar__social-list">
                 <li>
-                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                  <a href="#"><i class="fab fa-pinterest"></i></a>
                 </li>
                 <li>
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -45,18 +50,14 @@
                   <a href="#"><i class="fab fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-behance"></i></a>
+                  <a href="#"><i class="fab fa-dribbble"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-dribbble"></i></a>
+                  <a href="#"><i class="fab fa-behance"></i></a>
                 </li>
                 <li>
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </li>
-
-                <li>
-                    <a href="#"><i class="fas fa-search"></i></a>
-                  </li>
               </ul>
             </div>
 
@@ -91,11 +92,46 @@
               </ul>
             </div>
             <div class="col-auto">
-                <div class="top-nav__search"><i class="fas fa-search"></i></div>
+              <div class="top-nav__search"><i class="fas fa-search"></i></div>
             </div>
           </div>
         </div>
       </nav>
     </header>
+
+    <main>
+      <section class="hero">
+        <div class="container-fluid">
+          <h1 class="hero__title">About us</h1>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="about__content">
+                <h2 class="about__title">About our great team</h1>
+                <p class="about__description">
+                  <script>
+                    let p = document.querySelector(".about__description");
+                    p.textContent = "Filled text. ".repeat(45);
+                  </script>
+                </p>
+                <button>Read more</button>
+
+              </div>
+            </div>
+            <div class="col">
+              <img
+                src="./images/about.jpg"
+                alt="About Thumbnail Image"
+                class="about__thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
