@@ -3,28 +3,30 @@
 /* HERO */
 
 .hero > .container-fluid {
+  display: flex;
+
+  height: 215px;
+  /* padding: auto; */
+  /* width: auto; */
+
   background-image: url("/demo1/images/page-top-bg.jpg");
   background-size: 132%;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-position: left top; */
-  height: 215px;
-  /* padding: auto; */
-  display: flex;
-  /* width: auto; */
 }
 
-.hero .hero__title {
-  font-size: 4rem;
-  font-weight: bold;
-  color: white;
-  background-color: deeppink;
+.hero__title {
   max-width: max-content;
   max-height: max-content;
-  padding: .2rem 2rem;
-
+  padding: 0.2rem 2rem;
   margin: auto;
   border-radius: 5px;
+
+  color: white;
+  background-color: deeppink;
+
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 /* ABOUT CONTENT */
@@ -56,16 +58,17 @@
 
 /* FACT item */
 .fact-item {
+  height: 10rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 10rem;
 }
 
 .fact-item__big-number {
+  margin: 0;
+
   font-weight: bold;
   font-size: 2.5rem;
-  margin: 0;
 }
-

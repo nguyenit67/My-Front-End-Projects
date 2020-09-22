@@ -1,0 +1,7 @@
+.hero > .container {
+    display: flex;
+}
+
+.hero__title {
+    margin: auto;
+}

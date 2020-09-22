@@ -27,8 +27,9 @@ body {
  */
 
 button {
-    background-color: deeppink;
-    color: white;
     padding: 1rem 3rem;
     border: none;
+
+    background-color: deeppink;
+    color: white;
 }

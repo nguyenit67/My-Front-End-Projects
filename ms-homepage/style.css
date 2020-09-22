@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  color: #262626;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0;
+  justify-content: space-between;
+
+  font-size: 13px;
+}
+
+.main-nav .logo {
+  width: 110px;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav ul li {
+  padding: 0 10px;
+}
+
+.main-nav ul li a {
+  padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+  border-bottom: 2px solid #262626;
+}
+
+.main-nav .main-menu {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  padding: 10px 20px;
+
+  background: #262626;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 50px;
+  /* margin-bottom: 20px; */
+
+  width: 100%;
+  height: 400px;
+
+  background: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWtPXv?ver=3195&q=90&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=295&s=2120&d=795&aim=true")
+    no-repeat center center/cover;
+}
+.showcase h2,
+.showcase p {
+  margin-bottom: 10px;
+}
+
+.showcase .btn {
+  margin-top: 20px;
+}
+
+/* Home cards */
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.topic-card > img {
+  max-width: 297px;
+  width: 100%;
+}

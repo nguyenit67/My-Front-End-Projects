@@ -1,10 +1,11 @@
 /* styles for FOOTER of EVERY PAGE */
 
 .app-footer {
+  height: 12rem;
+  padding-top: 55px;
+
   background-image: url("/demo1/images/footer-bg.jpg");
   /* background-color: deeppink; */
-  padding-top: 55px;
-  height: 12rem;
 }
 
 /* LOGO */
@@ -14,9 +15,10 @@
 
 /* SOCIAL LIST */
 .app-footer__social-list {
-  list-style-type: none;
   display: flex;
   flex-flow: row nowrap;
+
+  list-style-type: none;
 }
 
 .app-footer__social-list > li {
@@ -29,10 +31,12 @@
 
 /* MENU */
 .app-footer__menu {
-  list-style-type: none;
+  float: right;
+
   display: flex;
   flex-flow: row nowrap;
-  float: right;
+
+  list-style-type: none;
 }
 
 .app-footer__menu > li {
@@ -49,6 +53,7 @@
 
 /* COPYRIGHT */
 .app-footer p {
-  font-size: 12px;
   float: right;
+  
+  font-size: 12px;
 }

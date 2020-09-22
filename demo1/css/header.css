@@ -5,6 +5,7 @@
 
 .top-bar {
   padding: 1rem 0;
+
   background-color: deeppink;
 }
 
@@ -13,9 +14,10 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+
   padding: 0;
   margin: 0;
-
+  
   list-style-type: none;
 }
 .top-bar__social-list > li {
@@ -35,7 +37,10 @@
 /* *********** */
 /* NAV TOP-NAV */
 .top-nav {
+  /* Display & Box Model */
   padding: 1rem 0;
+  
+  /* Color */
   background-color: white;
 }
 
@@ -46,10 +51,13 @@
 
 /* TOP-NAV MENU */
 .top-nav__menu {
-  list-style-type: none;
+  
   display: flex;
   flex-flow: row nowrap;
+  
   margin-left: 8rem;
+
+  list-style-type: none;
 }
 .top-nav__menu > li {
   margin: 0 1rem;
@@ -63,11 +71,13 @@
 
 /* TOP-NAV SEARCH */
 .top-nav__search {
-  background-color: deeppink;
   width: 2rem;
   height: 2rem;
-  line-height: 2rem;
   border-radius: 0.3rem;
+
+  background-color: deeppink;
+
+  line-height: 2rem;
   text-align: center;
 }
 
