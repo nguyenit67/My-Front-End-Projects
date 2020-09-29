@@ -450,4 +450,165 @@ select {
     font-size: 26px;
     line-height: 32px;
   }
+
+  .cart-info p {
+    display: none;
+  }
+}
+
+.cart-page {
+  margin: 80px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+th {
+  padding: 5px;
+  color: #fff;
+  background: #ff523b;
+  text-align: left;
+  font-weight: normal;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: #ff523b;
+  font-size: 12px;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 400px;
+}
+
+th:last-child,
+td:last-child {
+  text-align: right;
+}
+
+/* -------- account--page -------- */
+
+.account-page {
+  padding: 50px 0;
+  background: radial-gradient(#fff, #ffd6d6);
+}
+
+.form-container {
+  position: relative;
+  overflow: hidden;
+
+  width: 300px;
+  height: 400px;
+  padding: 20px 0;
+  margin: auto;
+
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+}
+
+.form-btn {
+  display: inline-block;
+}
+
+.form-btn span {
+  display: inline-block;
+  padding: 0 10px;
+  width: 100px;
+
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-container form {
+  position: absolute;
+  top: 130px;
+
+  max-width: 300px;
+  padding: 0 20px;
+
+  transition: transform 1s;
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+
+form .btn {
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#login-form {
+  left: -100%;
+}
+
+#reg-form {
+  left: 0;
+}
+
+form a {
+  font-size: 12px;
+}
+
+#indicator {
+  width: 100px;
+  height: 3px;
+  margin-top: 8px;
+  border: none;
+
+  background: #ff523b;
+
+  transform: translateX(100%);
+  transition: transform 1s;
+}
+
+.form-container.left-in > form#login-form {
+  transform: translateX(100%);
+}
+
+.form-container.left-in > form#reg-form {
+  transform: translateX(100%);
+}
+
+.form-container.left-in #indicator {
+  transform: none;
 }
