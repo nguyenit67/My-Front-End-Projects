@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Clock</title>
+    <style>
+      /** TEST|comment this ↓ */
+      body {
+        overflow: hidden;
+      }
+      * {
+        /* transform: scale(1.3); */
+        margin: auto;
+        margin-top: 100px;
+      }
+      /** TEST|comment this ↑ */
+
+      .clock * {
+        margin: 0;
+        padding: 0;
+        /* ???  */
+        box-sizing: border-box; /* ???  */
+      }
+
+      .clock {
+        --diameter: 400px;
+        --radius: calc(var(--diameter) / 2);
+        position: relative;
+
+        width: var(--diameter);
+        height: var(--diameter);
+
+        border: 2px solid #000;
+        border-radius: 50%;
+      }
+
+      .clock::after {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 3px;
+        height: 3px;
+        border: 1px solid #000;
+        border-radius: 50%;
+
+        background: #000;
+
+        transform: translate(-50%, -50%);
+      }
+
+      .clock__hand {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        /** TEST|comment this ↓ */
+        /* border: 1px solid #000;
+        border-radius: 2px;
+        height: 70px; */
+        /** TEST|comment this ↑ */
+
+        width: var(--diameter);
+
+        transform: translateY(-50%) rotate(-90deg);
+      }
+
+      .clock__hand::after {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        border-radius: 5rem;
+
+        background: #000;
+        transform: translateY(-50%);
+      }
+
+      /** TEST style ROTATION ↓ */
+      /* .clock__hand--hour {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      .clock__hand--minute {
+        transform: translateY(-50%) rotate(30deg);
+      }
+
+      .clock__hand--second {
+        transform: translateY(-50%) Rotate(60deg);
+      } */
+      /** TEST style ROTATION  ↑ */
+
+      /* custom style for hands */
+      .clock__hand--hour::after {
+        height: 4px;
+        width: 25%;
+        background: green;
+      }
+
+      .clock__hand--minute::after {
+        height: 3px;
+        width: 41%;
+        background: blue;
+      }
+
+      .clock__hand--second::after {
+        height: 2px;
+        width: 50%;
+        background: red;
+      }
+
+      #text-clock {
+        position: absolute;
+        left: 50%;
+        top: -0%;
+        font-size: 20px;
+        color: red;
+        transform: translate(-50%);
+      }
+    </style>
+    <!-- ------- import V.I.P "jQuery" -------
+    <script src="../plugins/jquery/jquery-3.5.1.min.js"></script> -->
+
+    <!--------- add here ----------->
+  </head>
+  <body>
+    <!--------- clocks goes brrrrrr ----------->
+
+    <div id="text-clock">Lorem ipsum dolor sit amet.</div>
+    <div class="clock">
+      <div class="clock__hand clock__hand--hour"></div>
+
+      <div class="clock__hand clock__hand--minute"></div>
+
+      <div class="clock__hand clock__hand--second"></div>
+    </div>
+
+    <script>
+      // get current time, update
+
+      // render clock
+
+      function initStyleTransformString(el) {
+        el.style.transform = getComputedStyle(el).transform;
+      }
+
+      const hourHand = document.querySelector(".clock__hand--hour");
+
+      const minuteHand = document.querySelector(".clock__hand--minute");
+
+      const secondHand = document.querySelector(".clock__hand--second");
+
+      const textClock = document.querySelector("#text-clock");
+
+      for (const el of [hourHand, minuteHand, secondHand]) {
+        initStyleTransformString(el);
+      }
+
+      const re = /(rotate)(\(.*\))/i;
+      function updateAngle(el, angle) {
+        const oldValue = el.style.transform;
+        let newValue = null;
+
+        if (oldValue.match(re)) {
+          newValue = oldValue.replace(re, "$1(" + angle + "deg)");
+        } else {
+          newValue = oldValue + "rotate(" + angle + "deg)";
+        }
+
+        el.style.transform = newValue;
+      }
+
+      const now = new Date();
+      const clockTime = {
+        hour: now.getHours() % 12,
+        minute: now.getMinutes(),
+        second: now.getSeconds(),
+      };
+
+      function updateClock(timestep) {
+        clockTime.second += timestep / 1000;
+        render(clockTime);
+      }
+      const formatDigit = (digit) => digit.toString().padStart(2, "0");
+
+      function render({ hour, minute, second }) {
+        textClock.textContent = [hour, minute, second]
+          .map(formatDigit)
+          .join(":");
+
+        const CIRCLE = 360;
+        hour %= 12;
+        const hourDecimal = hour + minute / 60 + second / 3600;
+
+        const minuteDecimal = minute + second / 60;
+
+        const secondDecimal = second;
+        // console.log(second);
+
+        const hourAngle = (hourDecimal / 12) * CIRCLE;
+        const minuteAngle = (minuteDecimal / 60) * CIRCLE;
+        const secondAngle = (secondDecimal / 60) * CIRCLE;
+
+        updateAngle(hourHand, hourAngle);
+        updateAngle(minuteHand, minuteAngle);
+        updateAngle(secondHand, secondAngle);
+      }
+
+      // function fpsRender(frameFunc) {
+
+      //   requestAnimationFrame(() => {
+      //     frameFunc();
+      //     requestAnimationFrame(frameFunc);
+      //   })
+      // }
+      function fpsRender(frameFunc) {
+        let lastTime = null;
+
+
+
+        function frame(time) {
+          if (lastTime != null) {
+            const timestep = time - lastTime;
+            frameFunc(timestep);
+          }
+          lastTime = time;
+          requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+
+
+      fpsRender(updateClock);
+
+      // setInterval(updateClock, 10);
+    </script>
+  </body>
+</html>
+
+<!-- something down here ↓ -->
+
+<!-- <div class="input-list">
+      <input type="month" />
+      <input type="week" />
+      <input type="date" />
+      <input type="datetime" />
+      <input type="datetime-local" />
+    </div> -->

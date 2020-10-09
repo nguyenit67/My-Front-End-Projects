@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Clock</title>
+
+    <style></style>
+
+    <!--------- add here ----------->
+  </head>
+  <body>
+    <!--------- clocks goes brrrrrr ----------->
+
+    <div id="text-clock"></div>
+    <canvas id="clock" width="800" height="600"></canvas>
+
+    <script>
+      const textClock = document.querySelector("#text-clock");
+
+      const FULL_CIRCLE = 360;
+      const CENTER_X = 200;
+      const CENTER_Y = 200;
+      const RADIUS = 100;
+      // get current time, update
+
+      const ctx = document.querySelector("canvas").getContext("2d");
+
+      drawCircle();
+
+      const now = new Date();
+      const clockTime = {
+        hour: now.getHours() % 12,
+        minute: now.getMinutes(),
+        second: now.getSeconds(),
+      };
+
+      function updateClock(timestep) {
+        clockTime.second += timestep / 1000;
+        render(clockTime);
+      }
+      const formatDigit = (digit) => digit.toString().padStart(2, "0");
+
+      const deg2rad = (deg) => (deg * Math.PI) / 180;
+
+      function updateAngle(drawFunc, degreeAngle) {
+        degreeAngle -= 90; // angle offset
+        // rotate
+        ctx.beginPath();
+        ctx.save();
+        ctx.translate(CENTER_X, CENTER_Y);
+        ctx.transform(1, 0, 0, 1, 0, 0.5);
+        ctx.rotate(deg2rad(degreeAngle));
+        drawFunc();
+        ctx.restore();
+      }
+
+      function drawCircle() {
+        ctx.beginPath();
+
+        ctx.arc(CENTER_X, CENTER_Y, RADIUS, 0, 7);
+        ctx.stroke();
+      }
+
+      function drawHourHand() {
+        const thick = 7;
+        const len = RADIUS * 0.4;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, -thick / 2, len, thick);
+      }
+
+      function drawMinuteHand() {
+        const thick = 5;
+        const len = RADIUS * 0.7;
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, -thick / 2, len, thick);
+      }
+
+      function drawSecondHand() {
+        const thick = 3;
+        const len = RADIUS;
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, -thick / 2, len, thick);
+      }
+
+      function render({ hour, minute, second }) {
+        textClock.textContent = [hour, minute, second]
+          .map(formatDigit)
+          .join(":");
+
+        hour %= 12;
+        const hourDecimal = hour + minute / 60 + second / 3600;
+
+        const minuteDecimal = minute + second / 60;
+
+        const secondDecimal = second;
+        // console.log(second);
+
+        const hourAngle = (hourDecimal / 12) * FULL_CIRCLE;
+        const minuteAngle = (minuteDecimal / 60) * FULL_CIRCLE;
+        const secondAngle = (secondDecimal / 60) * FULL_CIRCLE;
+
+        ctx.clearRect(0, 0, 800, 600);
+        drawCircle();
+        updateAngle(drawHourHand, hourAngle);
+        updateAngle(drawMinuteHand, minuteAngle);
+        updateAngle(drawSecondHand, secondAngle);
+      }
+
+      // function fpsRender(frameFunc) {
+      //   let lastTime = null;
+
+      //   function frame(time) {
+      //     if (lastTime != null) {
+      //       const timestep = time - lastTime;
+      //       frameFunc(timestep);
+      //     }
+      //     lastTime = time;
+      //     requestAnimationFrame(frame);
+      //   }
+      //   requestAnimationFrame(frame);
+      // }
+
+      // fpsRender(updateClock);
+
+      function intervalRender(timestep = 1000) {
+        setInterval(updateClock, timestep, timestep);
+      }
+
+      intervalRender();
+
+    </script>
+  </body>
+</html>
