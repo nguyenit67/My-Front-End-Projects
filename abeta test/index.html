@@ -35,7 +35,7 @@
         border-radius: 50%;
       }
 
-      .clock::after {
+      /* .clock:::after {
         content: "";
 
         position: absolute;
@@ -50,64 +50,43 @@
         background: #000;
 
         transform: translate(-50%, -50%);
-      }
+      } */
 
       .clock__hand {
         position: absolute;
         top: 50%;
-        left: 0;
+        right: 50%;
 
-        /** TEST|comment this ↓ */
-        /* border: 1px solid #000;
-        border-radius: 2px;
-        height: 70px; */
-        /** TEST|comment this ↑ */
-
-        width: var(--diameter);
-
-        transform: translateY(-50%) rotate(-90deg);
+        transform-origin: 100%;
       }
 
-      .clock__hand::after {
-        content: "";
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        border-radius: 5rem;
-
-        background: #000;
-        transform: translateY(-50%);
-      }
-
-      /** TEST style ROTATION ↓ */
+      /* ----------------------TEST style ROTATION ↓---------------------- */
       /* .clock__hand--hour {
-        transform: translateY(-50%) rotate(45deg);
+        transform: rotate(45deg);
       }
       .clock__hand--minute {
-        transform: translateY(-50%) rotate(30deg);
+        transform: rotate(30deg);
       }
 
       .clock__hand--second {
-        transform: translateY(-50%) Rotate(60deg);
+        transform: rotate(60deg);
       } */
-      /** TEST style ROTATION  ↑ */
+      /* ----------------------TEST style ROTATION ↑---------------------- */
 
       /* custom style for hands */
-      .clock__hand--hour::after {
+      .clock__hand--hour {
         height: 4px;
         width: 25%;
         background: green;
       }
 
-      .clock__hand--minute::after {
+      .clock__hand--minute {
         height: 3px;
         width: 41%;
         background: blue;
       }
 
-      .clock__hand--second::after {
+      .clock__hand--second {
         height: 2px;
         width: 50%;
         background: red;
@@ -149,9 +128,7 @@
       }
 
       const hourHand = document.querySelector(".clock__hand--hour");
-
       const minuteHand = document.querySelector(".clock__hand--minute");
-
       const secondHand = document.querySelector(".clock__hand--second");
 
       const textClock = document.querySelector("#text-clock");
@@ -162,16 +139,7 @@
 
       const re = /(rotate)(\(.*\))/i;
       function updateAngle(el, angle) {
-        const oldValue = el.style.transform;
-        let newValue = null;
-
-        if (oldValue.match(re)) {
-          newValue = oldValue.replace(re, "$1(" + angle + "deg)");
-        } else {
-          newValue = oldValue + "rotate(" + angle + "deg)";
-        }
-
-        el.style.transform = newValue;
+        el.style.transform = "rotate(" + (angle + 90) + "deg)";
       }
 
       const now = new Date();
@@ -220,8 +188,6 @@
       function fpsRender(frameFunc) {
         let lastTime = null;
 
-
-
         function frame(time) {
           if (lastTime != null) {
             const timestep = time - lastTime;
@@ -232,7 +198,6 @@
         }
         requestAnimationFrame(frame);
       }
-
 
       fpsRender(updateClock);
 
