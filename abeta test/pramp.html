@@ -19,9 +19,9 @@
       const textClock = document.querySelector("#text-clock");
 
       const FULL_CIRCLE = 360;
-      const CENTER_X = 200;
-      const CENTER_Y = 200;
-      const RADIUS = 100;
+      const RADIUS = 200;
+      const CENTER_X = RADIUS + 50;
+      const CENTER_Y = RADIUS + 50;
       // get current time, update
 
       const ctx = document.querySelector("canvas").getContext("2d");
@@ -46,10 +46,9 @@
       function updateAngle(drawFunc, degreeAngle) {
         degreeAngle -= 90; // angle offset
         // rotate
-        ctx.beginPath();
+        // ctx.beginPath();
         ctx.save();
         ctx.translate(CENTER_X, CENTER_Y);
-        ctx.transform(1, 0, 0, 1, 0, 0.5);
         ctx.rotate(deg2rad(degreeAngle));
         drawFunc();
         ctx.restore();
@@ -107,27 +106,26 @@
         updateAngle(drawSecondHand, secondAngle);
       }
 
-      // function fpsRender(frameFunc) {
-      //   let lastTime = null;
+      function fpsRender(frameFunc) {
+        let lastTime = null;
 
-      //   function frame(time) {
-      //     if (lastTime != null) {
-      //       const timestep = time - lastTime;
-      //       frameFunc(timestep);
-      //     }
-      //     lastTime = time;
-      //     requestAnimationFrame(frame);
-      //   }
-      //   requestAnimationFrame(frame);
-      // }
-
-      // fpsRender(updateClock);
-
+        function frame(time) {
+          if (lastTime != null) {
+            const timestep = time - lastTime;
+            frameFunc(timestep);
+          }
+          lastTime = time;
+          requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+      
       function intervalRender(timestep = 1000) {
         setInterval(updateClock, timestep, timestep);
       }
-
-      intervalRender();
+      
+      fpsRender(updateClock);
+      // intervalRender();
 
     </script>
   </body>

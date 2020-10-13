@@ -1,0 +1,42 @@
+/* styles for FOR EVERY PAGE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Myriad Pro", MyriadPro, sans-serif;
+  line-height: 1.5;
+  font-size: 1.0625rem;
+  text-rendering: optimizeLegibility;
+}
+
+.list-no-marker {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+}
+
+.container,
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  max-width: 100%;
+}
