@@ -31,73 +31,48 @@
 }
 
 /* -----------------TOP-NAV----------------- */
-.top-nav__wrapper {
+.top-nav {
+  --top-nav__bg: 
+    var(--headerbar-bg) top left / cover no-repeat content-box,
+    var(--headerbar-bg__wrapper) top left / cover no-repeat border-box wheat;
+
   position: absolute;
   top: 2rem;
   right: 0;
-  z-index: 1;
+  /* z-index: 0; */
 
-  padding: 7px 0;
+  /* padding: 7px 0; */
+  display: block;
   width: 1269px;
   height: 78px;
 
-  background:
-    var(--headerbar-bg__wrapper)
-    top left / cover 
-    wheat
-    ;
+  border: 0 solid transparent;
+  border-width: 7px 0;
 
-}
-
-.top-nav {
-  position: relative;
-
-  height: 64px;
-
-  background:
-     var(--headerbar-bg)
-    top left / cover
-    green
-    ;
-
+  background: var(--top-nav__bg);
 }
 
 .top-nav::before {
+  --pd: 7px;
+
   content: "";
   position: absolute;
-  top: 0;
+  top: calc(0px - var(--pd));
   left: 0;
-  z-index: -1;
+  /* z-index: -1; */
 
   width: 64px;
   height: 64px;
-  border-radius: 64px;
+  border-radius: 50% 0 0 50%;
+  
 
-  background:
-    var(--headerbar-bg) 
-    top left / cover
-    green
-    ;
+  border: var(--pd) solid transparent;
 
-  transform: translateX(-50%);
-}
+  border-left-width: 10px;
+  border-right: none;
 
-.top-nav__wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
+  background: var(--top-nav__bg);
 
-  width: 78px;
-  height: 78px;
-  border-radius: 80px;
-
-  background:
-    var(--headerbar-bg__wrapper)
-    top left / cover
-    var(--color-wheat)
-    ;
   transform: translateX(-50%);
 }
 
@@ -105,6 +80,7 @@
   margin: 0;
   padding: 0;
   height: 64px;
+  width: 100%;
 }
 
 .top-nav .row {
@@ -115,11 +91,19 @@
   justify-content: space-between;
 }
 
+.top-nav .col {
+  flex-basis: content;
+}
+
+.top-nav__logo {
+  position: relative;
+  /* z-index: 200; */
+}
+
 .top-nav__menu {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-
 
   width: 691.375px;
 }
@@ -127,7 +111,6 @@
 .top-nav__menu li {
   flex-basis: 19%;
 }
-
 
 .top-nav__menu a {
   /* display: inline-block; */
@@ -137,9 +120,8 @@
   font-family: NexaRustSans-Black, sans-serif;
   text-transform: uppercase;
 
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 900;
-  
 }
 
 .top-nav__tools {

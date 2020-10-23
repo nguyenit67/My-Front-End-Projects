@@ -1,65 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testify🤔🧐</title>
+
     <style>
-      .top-nav__wrapper {
-  position: absolute;
-  top: 2rem;
-  right: 0;
-  background:
-    url("https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/headerbar-bg__wrapper.png?v=375")  
-    top left / cover 
-    ;
-  padding: 7px 0;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-}
+      .box {
+        display: grid;
+        width: fit-content;
+        height: 100%;
+        margin-top: 2rem;
+      }
+      input[type=button] {
+        --size: 4.2rem;
 
-.top-nav {
-  position: relative;
+        display: inline-block;
+        margin-left: 1rem;
+        width: var(--size);
+        height: var(--size);
+        
+        word-wrap: break-word;
+        font: 1em consolas;
+      }
 
-  width: 500px;
-  height: 64px;
+      .cell {
+        --size: 2rem;
+        --bg-color: #000;
 
-  background:
-    url("https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/headerbar-bg.png?v=375") 
-    top left / cover
-    ;
+        position: relative;
 
-}
+        display: inline-block;
+        width: var(--size);
+        height: var(--size);
+        border: 1px solid #000;
+      }
 
-.top-nav__wrapper--before {
-  /* content: ""; */
-  position: absolute;
-  top: 0;
-  left: 0;
+      .cell::after {
+        content: "";
+        position: absolute;
 
-  /* display: inline-block; */
-  width: 78px;
-  height: 78px;
-  border-radius: 80px;
+        width: 100%;
+        height: 100%;
+        
+        /* opacity: 0.7; */
+      }
 
-  background:
-    url("https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/headerbar-bg.png?v=375") 
-    left top/ cover
-    
-    ;
-  z-index: -1;
+      .cell:checked::after {
+        background: var(--bg-color);
 
-  transform: translateX(-50%);
-}
+      }
     </style>
-</head>
-<body>
-  <!-- <div class="top-nav__wrapper">
-    <nav class="top-nav"> -->
-      <div class="top-nav__wrapper--before">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus.</div>
-    <!-- </nav>
-  </div> -->
 
+    <!-- SPEAKER -->
+    <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=bH6iPGeV"></script> -->
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    /> -->
+  </head>
+  <body>
+    <div class="control">
+      <a href="">Home</a>
+      <input type="button" id="" value="Generate random" />
+      <input type="button" id="next" value="Next" />
+      <input type="button" id="" value="Autorun" />
+      <input type="button" id="" value="Stop" />
+      
+    </div>
+    <div class="box"></div>
   </body>
-  </html>
+  <script src="./app.js"></script>
+</html>
