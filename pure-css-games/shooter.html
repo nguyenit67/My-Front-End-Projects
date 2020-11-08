@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooter</title>
+
+    <!-- <style>
+    
+    body {
+
+      border-bottom-color: ;
+      display: grid;
+      height: 100vh;
+
+      place-items: center;
+
+      counter-reset: score;
+    }
+
+    .target {
+      width: 100px;
+      height: 100px;
+
+      background: cyan;
+
+      border-radius: 50%;
+
+      animation: spread 1s infinite;
+    }
+
+    .target:hover {
+      counter-increment: score 2;
+
+      background: red;
+    }
+
+    @keyframes spread {
+
+      50% {
+        transform: scale(2);
+      }
+    }
+
+    .score::before {      
+      
+      content: "Point: " counter(score);
+
+      font-family: Fira Code;
+      font-size: 20px;
+    }
+
+    
+  </style> -->
+    <!-- <style>
+      .menu {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 70%;
+        justify-content: space-around;
+
+        list-style: none;
+      }
+
+      .menu li {
+        margin-top: 10px;
+        border-bottom: 1px solid black;
+      }
+
+      .menu > li {
+        text-transform: uppercase;
+      }
+
+      .floatable-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        width: 30%;
+        justify-content: space-between;
+
+        background: cyan;
+      }
+
+      @media (max-width: 425px) {
+        .menu {
+          display: unset;
+        }
+
+        .floatable-menu {
+          position: unset;
+
+          display: unset;
+
+          background: none;
+        }
+      }
+    </style> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .row {
+        height: 600px;
+        width: 500px;
+        background: cyan;
+      }
+      .col {
+        width: 200px;
+        height: 50px;
+        margin: 1rem;
+        background: orange;
+        flex-grow: 1;
+      }
+
+      .row {
+        display: flex;
+        flex-flow: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#">Home</a>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </body>
+</html>

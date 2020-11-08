@@ -1,0 +1,259 @@
+/* --------------------- RELATED RECIPES ------------------ */
+.related-recipes {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+
+  background: url("https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/background_green-desktop.jpg?v=375");
+}
+
+.related-recipes::before,
+.related-recipes::after {
+  --ysize: 15px;
+  --posy: calc(-1 * var(--ysize));
+
+  content: "";
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  height: var(--ysize);
+  background-repeat: repeat-x;
+}
+
+.related-recipes::before {
+  top: var(--posy);
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/borders/border-white-top.png?v=375);
+}
+
+.related-recipes::after {
+  bottom: var(--posy);
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/borders/border-white-bottom.png?v=375);
+}
+
+
+.related-recipes__headline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  color: #bdb325;
+
+  font-family: NexaRustScript;
+  font-size: 3.75rem;
+  line-height: .9em;
+
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.related-recipes__headline::before,
+.related-recipes__headline::after {
+  content: "";
+
+  display: block;
+  width: 30%;
+  background:
+    url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep-full-horizontal-green.png?v=375) no-repeat;
+
+}
+
+.related-recipes__headline::before {
+  background-position: left center;
+}
+
+.related-recipes__headline::after {
+  background-position: right center;
+
+}
+
+
+.related-recipes .row {
+  justify-content: space-between;
+  
+}
+
+.related-recipes .col {
+  width: calc(100% / 3);
+
+  padding: 0 15px;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  background: url("https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/page-bg.jpg?v=375");
+}
+
+.recipe__content {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  padding: 16px 10px;
+}
+
+/* .recipe__content > * {
+  flex-grow: 1;
+} */
+
+.recipe__title,
+.recipe__related-tag {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: #1f7a38;
+  text-transform: uppercase;
+}
+
+.recipe__title {
+  font-family: NexaRustSans-Black;
+  font-size: 1.25rem;
+  line-height: 1.2em;
+}
+
+/*
+recipe__img-wrapper
+.recipe__img
+.recipe__title
+.recipe__related-tag
+
+.recipe__keys
+*/
+
+.recipe__keys {
+  flex-grow: 1;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+
+/* .recipe__keys > * {
+  flex: 0 1 auto;
+} */
+
+.recipe__time {
+  text-transform: lowercase;
+}
+
+.recipe__time::before {
+  content: "\e917";
+}
+
+.recipe__level {
+  text-transform: capitalize;
+}
+
+.recipe__level::before {
+  content: "\e919";
+}
+
+.recipe__time,
+.recipe__level {
+  position: relative;
+  padding: 0 16px 0 38px;
+  color: #bdb325;
+  font-weight: 700;
+}
+
+.icon-before::before {
+  position: absolute;
+  left: 0;
+  top: -11px;
+
+  font-family: Icons;
+  font-size: 30px;
+  font-weight: 400;
+
+  /* transform: translateY(-25%); */
+}
+
+.related-recipes .col.col-mid {
+  position: relative;
+  left: calc(100% / 3);
+}
+
+.related-recipes__link-btn {
+  margin-top: 40px;
+  padding: 8px 16px;
+  border: 2px solid white;
+  text-align: center;
+}
+
+.related-recipes__link-btn > a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 28px;
+}
+
+/* --------------------- BRANDS n PRODUCTS ------------------ */
+.brands-n-prods {
+  padding-top: 72.5px;
+  /* padding-top: 60px; */
+  padding-bottom: 130px;
+
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/page-bg.jpg?v=375);
+}
+
+.brands-n-prods__headline {
+  max-width: 950px;
+  margin: 0 auto 37px;
+  display: flex;
+  justify-content: space-between;
+
+  color: #1f7a38;
+  white-space: nowrap;
+
+  font-family: NexaRustSans-Black;
+  font-size: 1.5625rem;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.brands-n-prods__headline::before,
+.brands-n-prods__headline::after {
+  content: "";
+  position: relative;
+  width: 50%;
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep-full-horizontal-green.png?v=375)
+    no-repeat;
+}
+
+.brands-n-prods__headline::before {
+  background-position: left center;
+}
+
+.brands-n-prods__headline::after {
+  background-position: right center;
+}
+
+.brands-n-prods__headline span {
+  margin: 0 27px;
+}
+
+.brands-n-prods__headline span i {
+  display: block;
+  margin-bottom: -6px;
+
+  color: #bdb325;
+  font-family: NexaRustScript;
+  font-size: 1.875rem;
+}
+
+/* ---- brands-n-prods SLIDER (slickJS) ---- */
+.brands-n-prods__slider * {
+  margin: 0;
+  padding: 0;
+}
+
+.brands-n-prods__slide-item {
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  transform: translateX( -50% );
+  
+}
