@@ -3,135 +3,554 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shooter</title>
+    <title>Don't title me</title>
 
-    <!-- <style>
-    
-    body {
-
-      border-bottom-color: ;
-      display: grid;
-      height: 100vh;
-
-      place-items: center;
-
-      counter-reset: score;
-    }
-
-    .target {
-      width: 100px;
-      height: 100px;
-
-      background: cyan;
-
-      border-radius: 50%;
-
-      animation: spread 1s infinite;
-    }
-
-    .target:hover {
-      counter-increment: score 2;
-
-      background: red;
-    }
-
-    @keyframes spread {
-
-      50% {
-        transform: scale(2);
-      }
-    }
-
-    .score::before {      
-      
-      content: "Point: " counter(score);
-
-      font-family: Fira Code;
-      font-size: 20px;
-    }
-
-    
-  </style> -->
-    <!-- <style>
-      .menu {
-        display: flex;
-        flex-flow: row nowrap;
-        width: 70%;
-        justify-content: space-around;
-
-        list-style: none;
-      }
-
-      .menu li {
-        margin-top: 10px;
-        border-bottom: 1px solid black;
-      }
-
-      .menu > li {
-        text-transform: uppercase;
-      }
-
-      .floatable-menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        display: flex;
-        flex-flow: row nowrap;
-        width: 30%;
-        justify-content: space-between;
-
-        background: cyan;
-      }
-
-      @media (max-width: 425px) {
-        .menu {
-          display: unset;
-        }
-
-        .floatable-menu {
-          position: unset;
-
-          display: unset;
-
-          background: none;
-        }
-      }
-    </style> -->
     <style>
-      * {
-        margin: 0;
+      #tabscontainer {
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        margin: 30px 0 30px 0;
         padding: 0;
-        box-sizing: border-box;
-      }
-      .row {
-        height: 600px;
-        width: 500px;
-        background: cyan;
-      }
-      .col {
-        width: 200px;
-        height: 50px;
-        margin: 1rem;
-        background: orange;
-        flex-grow: 1;
+        /* max-width: 655px; */
       }
 
-      .row {
-        display: flex;
-        flex-flow: column;
+      #tabscontainer > .tabitem > [name="radiogroupfortabs"] {
+        position: absolute;
+        /* visibility: hidden; */
+        display: none;
       }
+
+      #tabscontainer > .tabitem > [id^="tab-label"] {
+        position: relative;
+        top: 0px;
+        max-width: 200px;
+        display: inline-block;
+        margin: 4px 2px 0 0;
+        padding: 12px 21px;
+        border-radius: 5px 5px 0 0;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #b0b0b0;
+        cursor: pointer;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #tabscontainer > .tabitem > [id^="tab-label"]:hover {
+        background: #969696;
+      }
+
+      #tabscontainer > .tabitem > .tab-content {
+        order: 999;
+        /* Set to a high value - just has to be at least one more than the number of tabs */
+        display: none;
+        z-index: 2;
+        top: 48px;
+        width: 100%;
+        min-height: 5em;
+        overflow: hidden;
+        font-size: 14px;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px 25px 25px 25px;
+        background: #c9c9c9;
+        margin-top: -1px;
+        border-radius: 0 5px 5px 5px;
+      }
+
+      #tabscontainer
+        > .tabitem
+        > [name="radiogroupfortabs"]:checked
+        + [id^="tab-label"] {
+        z-index: 4;
+        margin-top: 0px;
+        padding-top: 16px;
+        background: #c9c9c9;
+        border-color: #000 #000 #c9c9c9 #000;
+      }
+
+      #tabscontainer > .tabitem > .radiofortab:checked + .tab-content {
+        display: block;
+      }
+
+      /*----- Separate styling of H2 tag for CodePen demo -----*/
+      h2 {
+        font-size: 1rem;
+        margin-bottom: -0.75rem;
+      }
+
+      
+
     </style>
   </head>
-
   <body>
-    <a href="#">Home</a>
+    
+    <details>
+      <summary>Some text here hehe</summary>
+      sasdas
+    </details>
+    <a href="">Home</a>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+      reprehenderit! Sapiente quisquam, consequuntur aperiam nam placeat numquam
+      illum, praesentium, veniam fugit quas laboriosam distinctio autem vel?
+      Voluptates quae eos minus incidunt provident voluptas voluptatibus esse
+      odio cumque repellat, illum ab, eius fuga excepturi natus, voluptatem
+      ratione culpa nihil nemo quo facere? Odit laboriosam hic error,
+      voluptatibus placeat ad explicabo nobis nostrum itaque perspiciatis ullam
+      vero maxime, facere similique blanditiis, nesciunt quae autem dolor atque
+      sint vitae! Quidem laboriosam voluptatibus assumenda aut ratione, in
+      optio, repudiandae laudantium non maiores voluptate? Neque aut tempora,
+      eligendi non corporis maiores accusamus molestiae nam, a magni veniam
+      dolorum, quo ducimus fugit quibusdam alias! Excepturi et nam nihil aut ut.
+      Fugiat quos, quaerat aliquam modi non enim praesentium explicabo ex sint
+      eligendi veritatis ratione quibusdam similique. Esse voluptates
+      accusantium eius adipisci repellendus enim dolorem, velit molestias
+      expedita aperiam inventore labore dolorum alias voluptatum saepe veniam
+      deserunt? Veniam fugit voluptate quaerat tenetur accusamus iste nobis
+      incidunt explicabo! Iste veniam et animi accusamus ullam, praesentium
+      doloribus repudiandae, numquam tenetur, nam totam placeat aspernatur?
+      Possimus, asperiores inventore? Ipsum quos asperiores tempore magni quae
+      autem enim veritatis quidem id rerum nostrum, nulla possimus optio dolores
+      consequatur beatae praesentium. Nesciunt fuga, pariatur dolorem
+      consequuntur vel mollitia sed quaerat saepe nihil tenetur labore! Nisi
+      facilis provident ipsa enim unde sed? Omnis dignissimos totam itaque?
+      Eaque, quasi id. Deleniti deserunt est hic vero nemo natus. Corporis
+      consectetur rerum itaque tenetur doloremque, accusamus, expedita, iste
+      quae quos veritatis voluptas ipsa. Libero in porro minima repudiandae
+      sequi amet eaque ipsam, laudantium dignissimos itaque omnis ea aut
+      suscipit, assumenda rem architecto vel, harum sapiente odit eveniet nisi
+      nam? Laborum dolorum voluptatem magni maiores est laboriosam eius
+      aspernatur nobis facilis, pariatur libero laudantium odio illo error
+      iusto! Accusamus delectus itaque, adipisci, quibusdam odio tenetur culpa
+      tempora ratione voluptatem, dicta ducimus omnis sit temporibus cumque at
+      ex nobis quam laboriosam doloribus cupiditate. Numquam unde sed
+      necessitatibus est excepturi iure cumque, tenetur tempore! Perspiciatis
+      modi quas voluptates incidunt accusantium reprehenderit odio aliquid sit
+      corrupti quia molestias facere beatae vero, obcaecati atque voluptate
+      nostrum ullam error ipsam inventore id quaerat voluptatibus! Ipsum, ipsam
+      ipsa optio reiciendis iure sed deleniti dolore totam aliquam. Eligendi,
+      aut nihil dolore consectetur, distinctio doloremque laboriosam dolorum
+      veniam optio quos, cumque enim vitae eius voluptatibus similique odit
+      quidem ex saepe ad dolor necessitatibus sit accusantium magni. Minus vitae
+      deserunt similique qui, beatae velit repellat atque unde. Numquam
+      obcaecati rem, cum atque eius voluptatibus voluptate culpa esse officiis?
+      Ab consequuntur eum voluptatem beatae velit quod magnam. Excepturi facere
+      at incidunt ipsa fugiat non architecto ullam eligendi eveniet, vitae totam
+      mollitia exercitationem, possimus nihil optio quos iure! Quasi voluptate,
+      illo deleniti earum fugiat sapiente quos? Eius minus ea doloribus delectus
+      vel sunt ratione assumenda aspernatur saepe inventore, quaerat similique
+      itaque et tenetur accusantium cum magnam. Unde non et similique dolorum
+      amet voluptates maxime saepe ducimus, quia impedit inventore libero ut
+      expedita, dolores doloremque minus, soluta consequatur ratione iusto.
+      Praesentium, officiis fuga labore minima commodi dolorem aut illo
+      repellendus enim dignissimos reprehenderit quasi? Accusamus architecto
+      culpa tempore totam mollitia, repudiandae magni a eius molestias nostrum
+      illum excepturi illo provident itaque aspernatur autem? Ab culpa inventore
+      iure fuga magnam, ipsa sint sequi atque minus perspiciatis illo quaerat
+      sunt at dolore, accusamus exercitationem dignissimos consequatur quae?
+      Voluptatum blanditiis sapiente harum culpa dolorum exercitationem laborum,
+      animi ipsum ut omnis beatae veritatis sed repellat sint dolore perferendis
+      deserunt incidunt ad laudantium veniam, libero natus vero? Ipsum doloribus
+      ipsa itaque eius provident adipisci, atque, voluptate recusandae culpa
+      esse ut voluptatibus impedit nemo aliquam! Earum architecto in eos maiores
+      aut nostrum quae quod, id ex repellendus ratione fugiat, autem nulla
+      laboriosam consectetur quia quam quibusdam dolore cupiditate! Illum
+      obcaecati animi, optio quisquam modi inventore, et cumque reprehenderit
+      iste doloremque soluta consectetur, tempore nihil? Vitae quisquam corporis
+      magnam praesentium earum quis animi odit reiciendis perferendis veritatis,
+      asperiores id esse provident voluptas dolore iure explicabo in quae quam
+      commodi voluptatibus? Quae laboriosam laborum aspernatur iure ipsum,
+      suscipit sit voluptatum maxime veritatis culpa cumque fugiat dolor impedit
+      consectetur nisi dolorem. Id molestiae vel, cupiditate omnis, laboriosam
+      adipisci quod sunt mollitia repellat accusamus, asperiores assumenda natus
+      atque soluta delectus suscipit temporibus ullam eaque culpa ad ipsum.
+      Quasi accusamus ab obcaecati autem eum similique amet vel deserunt commodi
+      velit doloremque voluptatem ad quas, praesentium optio tempora consectetur
+      impedit. Commodi placeat laudantium dolores aperiam consectetur, provident
+      quae fugit obcaecati? Dolores, harum nobis? Similique reiciendis labore
+      illum, molestias, in nam quis reprehenderit qui unde autem ad corporis
+      eligendi? Eveniet quos impedit minus odit exercitationem sapiente fugiat
+      adipisci consectetur magnam magni, nam iusto vel possimus cum amet tempore
+      tenetur laboriosam ipsam, ullam atque. Facilis accusantium obcaecati
+      provident veniam ratione quibusdam modi incidunt. Distinctio qui est
+      recusandae, laudantium quod ullam eius, doloremque itaque cum quam, odit
+      odio voluptatibus quo explicabo eos? Corrupti esse cupiditate fugit quae
+      deleniti molestias quaerat, possimus aliquid, molestiae eveniet sint
+      commodi laborum? Alias ut libero, in ea nobis temporibus aut culpa ratione
+      reprehenderit distinctio omnis officia sapiente saepe voluptatibus
+      accusamus magnam quam ipsam vero nemo sed. Laudantium, repellendus
+      facilis! Corrupti, facilis accusantium explicabo accusamus esse possimus?
+      Atque quae debitis consectetur amet non? Natus impedit earum, quaerat
+      ipsum assumenda, obcaecati itaque vel, molestiae laudantium reiciendis
+      fugiat? Distinctio quam hic atque, non, sunt placeat a libero error
+      expedita, optio inventore. Repellat aspernatur quisquam temporibus quaerat
+      pariatur autem inventore incidunt iusto commodi maiores! Laborum
+      temporibus maiores labore non recusandae! Alias amet vitae deserunt iusto
+      unde natus laudantium accusamus consequuntur. Exercitationem laudantium
+      pariatur fuga inventore asperiores eius architecto nemo laboriosam.
+      Excepturi, veniam sapiente eaque molestiae qui, fugiat saepe dolorem
+      architecto, voluptate voluptatem tempora velit? Facilis itaque unde
+      praesentium libero accusantium nisi omnis velit tempora corporis qui quos
+      vitae labore tenetur inventore nostrum, dicta enim quo eligendi,
+      laudantium, sapiente minima. A quis porro quam quos recusandae fugit
+      necessitatibus tenetur magni asperiores itaque numquam voluptatibus
+      delectus nesciunt, expedita ullam inventore velit consectetur vitae illo
+      qui explicabo doloremque quaerat! Vel, cumque est. Corporis dolorum
+      inventore magnam deleniti quasi quod itaque ducimus? Ab impedit dolores
+      autem illo?
+    </p>
+    <div id="tabscontainer">
+      <!-- NOTE:  labels are named with ID's instead of classed so that individual labels can have background images set rather than using colors if desired.
+    Referencing of the labels in the CSS is done by the selector [id^="tab-label"] which really operates like class="tab-label" -->
+      <div class="tabitem">
+        <label id="tab-label1" for="radiofortab1">Features</label>
+        <input
+          type="radio"
+          class="radiofortab"
+          name="radiogroupfortabs"
+          id="radiofortab1"
+          checked
+        />
+        <div id="tab-content1" class="tab-content">
+          <h2>(RE)STYLING</h2>
+          <p>
+            This tab component is created with just HTML and CSS - no
+            Javascript. The tabs shown here are left mostly as-is from a client
+            website. They do not have to be left square as shown - they can be
+            styled to take on any appearance (see comments in the CSS). Also,
+            have a look at
+            <a href="https://tympanus.net/Development/TabStylesInspiration/"
+              >this site</a
+            >
+            for inspiration (note that they use ul/li in their HTML structure as
+            well as a little Javascript to achieve the final result).
+          </p>
+          <p>
+            The client for which this component was developed needed a
+            <strong>border around eveything</strong> as shown here. The border
+            is also left as-is because styling with the border was initially
+            more difficult than styling with solid colors (see the related blog
+            post about the problem encountered when using a border).
+          </p>
+          <h2>HANDLES DYNAMIC CONTENT AND KEEPS IT WITHIN THE DOCUMENT FLOW</h2>
+          <p>
+            Each tab's section grows vertically with the content. Go ahead -
+            click on each of the other tabs to see. Along with the fact that
+            each tab section grows as needed, a key feature of this tab
+            component is that it DOES NOT USE ABSOLUTE POSITIONING. Other pure
+            HTML/CSS Tab components that were tried/researched used absolute
+            positioning and so when the length of the tab content area grew as
+            variable length dynamic content was filled in, the tab component
+            extended below the bottom of the page because the absolute
+            positioning messed up the flow of elements on the page such that the
+            page length would not grow to enclose the tab.
+          </p>
+        </div>
+      </div>
 
-    <div class="row">
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col"></div>
+      <div class="tabitem">
+        <label id="tab-label2" for="radiofortab2">DEVELOPMENT</label>
+        <input
+          type="radio"
+          class="radiofortab"
+          name="radiogroupfortabs"
+          id="radiofortab2"
+        />
+        <div id="tab-content2" class="tab-content">
+          <h2>BACKGROUND OF HOW THE COMPONENT WAS DEVELOPED</h2>
+          <p>
+            This component actually started when another component on CodePen
+            was tried and proved not to work as needed. See the blog post
+            describing the development of this component and the nuances that
+            were encountered along the way including the absolute positioning
+            problem, the 1px border problem, a discussion on the overuse of
+            ul/li, and an explanation of how Flexbox provided the functionality
+            needed to ultimately make this component work without needing any
+            assistance from Javascript. The background on each mediaitem is
+            colored just to show it's extent since no thumbnails are included
+            here.
+          </p>
+        </div>
+      </div>
+
+      <div class="tabitem">
+        <label id="tab-label3" for="radiofortab3">USING THE COMPONENT</label>
+        <input
+          type="radio"
+          class="radiofortab"
+          name="radiogroupfortabs"
+          id="radiofortab3"
+        />
+        <div id="tab-content3" class="tab-content">
+          <h2>IMPLEMENTATION</h2>
+          <p>
+            While quick implementation cannot be guaranteed, because of the
+            styling chosen and the name-spacing employed, this component should
+            be able to be dropped into existing HTML and used with very minimal
+            changes other than styling the appearance and changing the max-width
+            on the #tabscontainer.
+          </p>
+          <h2>RESPONSIVENESS</h2>
+          <p>Discussion - Flexbox</p>
+        </div>
+      </div>
+
+      <div class="tabitem">
+        <label id="tab-label4" for="radiofortab4">
+          lorem
+          <!-- <p>Lorem ipsum</p>
+          <p>Lorem ipsum</p> -->
+        </label>
+        <input
+          type="radio"
+          class="radiofortab"
+          name="radiogroupfortabs"
+          id="radiofortab4"
+        />
+        <div id="tab-content4" class="tab-content">
+          <p>
+            This media tab was also used in the client's website and is left
+            here as an example. The multiple divs in the HTML that are of
+            CLASS=mediaitem could, of course, be replaced with a single
+            mediaitem div within a query call to the server that would then
+            automatically create multiple mediaitem divs for all items selected
+            by the query. Note that Flexbox is also used to lay out the
+            mediaitem divs.
+          </p>
+          <div id="mediamatrix">
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+            <div class="mediaitem">
+              <div class="mediaitemthumb">
+                MEDIA ITEM<br /><!-- place anchor tag with image here in place of MEDIA ITEM -->
+              </div>
+              <div class="mediaitemcaption">Media Item Caption</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+      rerum nisi fugit debitis alias minus illo esse nemo autem. Ad consectetur
+      at neque iusto voluptatem similique. Totam dolorum quod exercitationem
+      mollitia nesciunt omnis facilis illo cupiditate soluta. Deserunt dolor
+      autem odit praesentium dicta a eligendi tempora rerum beatae consequatur
+      soluta, accusantium in, placeat quasi asperiores nulla expedita tempore
+      nesciunt iure? Ipsam suscipit ratione odio et, a unde natus dolores
+      quisquam ex iste dolorum atque veniam praesentium libero rerum commodi
+      reprehenderit eos ipsa vero recusandae quia animi. Minima voluptate nihil
+      facere ex, illum dicta dolorem nesciunt optio, quam nulla quasi blanditiis
+      autem reprehenderit eius ipsam ratione? Voluptas maiores non est
+      consequatur veritatis eos doloremque omnis sint recusandae dolores, quas
+      pariatur animi voluptate quo placeat similique harum optio saepe quam at.
+      Illum hic ex, ut numquam ullam sunt officia totam dignissimos! Placeat,
+      dignissimos non. Necessitatibus, error cumque accusamus sint corporis
+      dicta voluptas modi explicabo, asperiores officia molestias soluta
+      officiis perspiciatis obcaecati natus cum odit sed dolorem magni in quis
+      ipsa at expedita facere! Dolor nihil officia suscipit tempore
+      necessitatibus ipsa earum, alias libero recusandae iste dolores nesciunt
+      dicta consequatur aliquid accusantium commodi corporis cum omnis
+      voluptatum ab dolorum adipisci! Deserunt nisi cumque minus sint enim
+      nesciunt ipsam alias illum quidem unde, numquam eligendi dolorem debitis
+      vel quaerat aliquam perferendis? Dolor eaque adipisci in quos saepe minima
+      beatae ipsam sequi quam culpa expedita modi tenetur sapiente doloremque
+      dignissimos, tempora consequatur suscipit inventore, vitae libero eius
+      praesentium voluptates. Voluptatibus provident, ullam nisi laudantium quam
+      at dolor officia cum perspiciatis nemo neque ducimus eaque dolorum,
+      maiores ipsa! Culpa, eveniet minus non ut aut voluptatibus aliquid totam,
+      veniam molestiae illum voluptas vel quasi veritatis porro odio fuga maxime
+      magnam possimus laboriosam laborum assumenda fugit similique officiis
+      facere? Ut voluptate earum repudiandae iusto modi porro accusamus dolore
+      error facere sequi minima ullam, consequuntur sapiente? Ipsa debitis nobis
+      labore beatae quisquam unde nisi facilis, quas magni tempore accusamus
+      quae! Atque sint sit rem, delectus quo blanditiis neque nulla accusantium
+      culpa asperiores, odit aliquid! Consequatur harum nihil praesentium error
+      ratione reiciendis et reprehenderit totam corporis quas, eos velit odio
+      magni incidunt labore tempore quo, neque iusto! Adipisci itaque
+      perspiciatis dicta distinctio incidunt iure optio ex quidem officia
+      eveniet soluta repudiandae quam, hic dolorum voluptatem iste unde modi
+      accusamus ratione numquam animi. Accusantium odit labore tempora
+      cupiditate voluptate dicta, laboriosam modi numquam. Quas expedita
+      quisquam excepturi voluptate veniam aliquam labore, rem, commodi illo
+      placeat temporibus ut voluptatem libero! Nesciunt libero dolore nemo
+      maiores ipsa enim cum ut? A earum quaerat modi aliquam accusantium numquam
+      ad voluptates possimus hic. Libero optio delectus error. Labore blanditiis
+      dolorem, vel harum ipsum natus provident porro nam rem molestiae eum
+      necessitatibus voluptatem repellendus explicabo aliquam. Cupiditate ipsam
+      vitae earum quo explicabo blanditiis quos voluptas molestiae inventore
+      fugiat officia dolores corporis consequuntur sit dolorum delectus
+      obcaecati ullam quibusdam tenetur quod iure, voluptatibus corrupti eius.
+      Deserunt illo culpa a nam atque dolores, voluptatibus soluta perspiciatis
+      quia quod corrupti quidem esse accusamus facere unde, qui repellat dolorum
+      harum quis dolore! Obcaecati a totam nobis eveniet optio magnam, molestias
+      praesentium ipsa maiores dolorem blanditiis saepe tenetur enim corporis
+      architecto earum nemo quos. Magnam eos nihil reprehenderit accusamus
+      placeat voluptatem dolore debitis? Accusantium libero dignissimos tempore
+      consequatur in aspernatur voluptate? Minus commodi, enim dolorum eum et
+      velit distinctio facere repellat tempore eligendi esse, beatae illum neque
+      aspernatur tenetur doloribus nesciunt autem ea saepe veritatis. Quia,
+      fugit iure consectetur veritatis incidunt delectus ea reiciendis ex velit
+      vitae eaque id architecto enim obcaecati suscipit ad quod atque mollitia
+      cumque corrupti illo sit a? Nulla odit fuga, doloribus laborum cum beatae
+      dolorem placeat amet facere est aut veniam repellat ipsa temporibus
+      distinctio illo quos iure fugiat neque sed qui. Dignissimos quae quia
+      itaque temporibus cupiditate ea provident expedita dolores, eveniet
+      quibusdam iusto officiis a commodi debitis minus? Sunt sint, cupiditate
+      numquam dignissimos perspiciatis voluptatum magni ex animi totam laborum,
+      amet velit! Provident non soluta voluptas quam, cumque unde esse. Velit
+      placeat nihil, quaerat doloribus non minus. Assumenda inventore minus
+      repellendus quae, sint eum, sunt, amet eligendi ad tempore iure aspernatur
+      ea excepturi esse corporis quibusdam quam est accusamus nisi magnam in
+      illo. Eos minima ullam ratione voluptates asperiores itaque cumque
+      corporis voluptatum quaerat, consequuntur dolorum beatae blanditiis,
+      ducimus ipsa fugiat suscipit obcaecati rem sapiente quam? Consequatur
+      maiores id repellat culpa quia, hic facilis veniam sequi esse! Eveniet
+      accusantium eos nisi, ratione blanditiis fuga earum consequatur deleniti
+      sit autem tenetur expedita aspernatur perspiciatis quibusdam fugiat vero
+      laudantium dolores aliquam minus quod deserunt reiciendis veritatis?
+      Tenetur voluptates autem recusandae quibusdam vitae quaerat et assumenda
+      eaque aliquid natus inventore delectus omnis saepe, aperiam cumque ipsam
+      impedit libero magnam voluptatem minus repudiandae! Natus ipsam repellat
+      voluptatum aliquam, est illo laborum obcaecati delectus eaque similique
+      aut ipsa, sunt, dicta dignissimos reprehenderit eveniet? Facere eum
+      voluptates asperiores ut consequatur quidem doloremque. Aliquam alias
+      error, incidunt maxime reiciendis dolorem dignissimos voluptate eveniet
+      mollitia quidem impedit labore cumque reprehenderit porro iure autem nam
+      corrupti non. Voluptate cupiditate quaerat praesentium voluptatem totam
+      nulla sapiente id non neque, facilis repudiandae amet repellat, iste natus
+      architecto veniam! Quod officia velit, iure non libero mollitia cupiditate
+      necessitatibus, ipsa rerum aut error id delectus consequuntur quaerat
+      impedit quo dicta suscipit cumque. Dicta temporibus autem quisquam sint
+      quos? Velit ipsa facilis neque accusamus voluptas doloremque repudiandae
+      ad fugit, amet necessitatibus iste provident sit quaerat fugiat corporis
+      maiores inventore optio vero alias aperiam possimus dicta ullam voluptatem
+      voluptate. Incidunt neque laborum ullam aperiam ut cupiditate labore
+      soluta, accusantium quis? Distinctio aut amet soluta possimus dignissimos
+      architecto dolorum est repellat alias exercitationem pariatur facere
+      magnam quibusdam doloribus necessitatibus maxime earum itaque id voluptas
+      fuga totam, ab culpa? At reiciendis optio quas quia nemo ratione hic
+      exercitationem alias praesentium maiores, odio excepturi dolor assumenda
+      laborum consequatur similique cum quod sit atque maxime, expedita
+      perspiciatis ipsa mollitia! Ullam velit inventore, unde dolore facere quia
+      cupiditate minima? Amet veritatis molestias quaerat ea possimus hic, eum
+      quos dolores commodi excepturi impedit iste blanditiis doloribus odit ipsa
+      ratione sapiente beatae! Quod, nam eligendi.
+    </p>
   </body>
 </html>

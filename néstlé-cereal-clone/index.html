@@ -10,6 +10,37 @@
       type="image/svg+xml"
     />
 
+    <!---------------- JQuery -------------->
+    <script src="../plugins/jquery/jquery-3.5.1.min.js"></script>
+
+    <!-- SlickJS Carousel  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../plugins/slick/slick.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="../plugins/slick/slick.min.js"
+    ></script>
+
+    <!---- IMPORT Smart TABS layout plugin ---->
+    <!-- smart_tab CSS -->
+    <!-- <link
+      href="https://unpkg.com/jquery-smarttab@3/dist/css/smart_tab_all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
+
+    <!-- smart_tab JavaScript -->
+    <script
+      src="../plugins/smart-tab/jquery.smart-tab.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- Init Utilities -->
+    <script src="./js/init.js"></script>
+
     <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
@@ -18,18 +49,6 @@
 
     <!-- Font NexaRustScript + Icons -->
     <link rel="stylesheet" href="./css/fonts.css" />
-
-
-    <!---------------- JQuery -------------->
-    <script src="../plugins/jquery/jquery-3.5.1.min.js"></script>
-
-    <!-- SlickJS Carousel  -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <!-- Init Utilities -->
-    <script src="./js/init.js"></script>
-
   </head>
   <body>
     <header>
@@ -103,7 +122,6 @@
         <div class="container">
           <h2 class="related-recipes__headline">related recipes</h2>
           <div class="row">
-            
             <div class="col">
               <a href="#here-youre-donkey-food" class="recipe-link-wrapper">
                 <div class="recipe">
@@ -168,23 +186,19 @@
                   </figure>
 
                   <div class="recipe__content">
-                    <h3 class="recipe__title">
-                      Nesquik Mini Coconut Bites</h3>
+                    <h3 class="recipe__title">Nesquik Mini Coconut Bites</h3>
                     <span class="recipe__related-tag">
                       CHOCOLATE NESQUIK CEREAL
                     </span>
 
                     <div class="recipe__keys">
-                      <span class="recipe__time icon-before">
-                        10 min.</span>
-                      <span class="recipe__level icon-before">
-                        easy</span>
+                      <span class="recipe__time icon-before"> 10 min.</span>
+                      <span class="recipe__level icon-before"> easy</span>
                     </div>
                   </div>
                 </div>
               </a>
             </div>
-
           </div>
 
           <div class="row">
@@ -213,13 +227,202 @@
             </span>
           </h2>
           <ul class="brands-n-prods__slider">
-            <li class="brands-n-prods__slide-item"><a href="#"><img src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/box_bowls_brand_teaser_640x640_-green.webp?itok=H9uf6by5" alt="A Nestle cereal product"></a></li>
-            <li class="brands-n-prods__slide-item"><a href="#"><img src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/brand_logos_cheerios_640x640_0.webp?itok=Rk5DpVvi" alt="A Nestle cereal product"></a></li>
-            <li class="brands-n-prods__slide-item"><a href="#"><img src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/cookie_crisp_640x640_v12_0.webp?itok=EbI8gQ_c" alt="A Nestle cereal product"></a></li>
-            <li class="brands-n-prods__slide-item"><a href="#"><img src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/brand_teaser.webp?itok=LuHy6LqJ" alt="A Nestle cereal product"></a></li>
-            <li class="brands-n-prods__slide-item"><a href="#"><img src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/pr09486_cpuk_product_page_brand_teaser_golden_grahams_640x640.webp?itok=mWLmLaOh" alt="A Nestle cereal product"></a></li>
-            <li class="brands-n-prods__slide-item"><a href="#"><img src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/pr09486_cpuk_product_page_brand_teaser_golden_nuggets_640x640.webp?itok=V47KVjiN" alt="A Nestle cereal product"></a></li>
+            <li class="brands-n-prods__slide-item" style="width: 320px">
+              <a href="#"
+                ><img
+                  src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/box_bowls_brand_teaser_640x640_-green.webp?itok=H9uf6by5"
+                  alt="A Nestle cereal product"
+              /></a>
+            </li>
+            <li class="brands-n-prods__slide-item" style="width: 320px">
+              <a href="#"
+                ><img
+                  src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/brand_logos_cheerios_640x640_0.webp?itok=Rk5DpVvi"
+                  alt="A Nestle cereal product"
+              /></a>
+            </li>
+            <li class="brands-n-prods__slide-item" style="width: 320px">
+              <a href="#"
+                ><img
+                  src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/cookie_crisp_640x640_v12_0.webp?itok=EbI8gQ_c"
+                  alt="A Nestle cereal product"
+              /></a>
+            </li>
+            <li class="brands-n-prods__slide-item" style="width: 320px">
+              <a href="#"
+                ><img
+                  src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/brand_teaser.webp?itok=LuHy6LqJ"
+                  alt="A Nestle cereal product"
+              /></a>
+            </li>
+            <li class="brands-n-prods__slide-item" style="width: 320px">
+              <a href="#"
+                ><img
+                  src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/pr09486_cpuk_product_page_brand_teaser_golden_grahams_640x640.webp?itok=mWLmLaOh"
+                  alt="A Nestle cereal product"
+              /></a>
+            </li>
+            <li class="brands-n-prods__slide-item" style="width: 320px">
+              <a href="#"
+                ><img
+                  src="https://www.nestle-cereals.com/uk/sites/g/files/qirczx211/f/styles/scale_320/public/brand_teaser/pr09486_cpuk_product_page_brand_teaser_golden_nuggets_640x640.webp?itok=V47KVjiN"
+                  alt="A Nestle cereal product"
+              /></a>
+            </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- 
+        lets-talk
+       -->
+      <section class="lets-talk">
+        <div class="container">
+          <h2 class="lets-talk__headline cross-heading">
+            <span>
+              <i>Let's</i>
+              talk
+            </span>
+          </h2>
+
+          <div class="lets-talk__tabbox">
+            <ul class="nav lets-talk__tabmenu">
+              <li>
+                <a href="#lets-talk__write-us" class="nav-link">
+                  <span class="icon icon--chat"></span>
+                  WRITE US</a>
+              </li>
+
+              <li>
+                <a href="#lets-talk__faq" class="nav-link">
+                  <span class="icon icon--info"></span>
+                  FAQ</a>
+              </li>
+
+              <li>
+                <a href="#lets-talk__in-person" class="nav-link">
+                  <span class="icon icon--contact"></span>
+                  IN PERSON</a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane" id="lets-talk__write-us" role="tabpanel">
+                <p>I'd like to contact Nestlé Cereals because</p>
+                <ul class="mod-write-us__link-list">
+                  <li>
+                    <a href="#" class="mod-write-us__link">
+                      I would like to ask a question
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="mod-write-us__link">
+                      I would like some nutritional information
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="mod-write-us__link">
+                      I would like to enquire about a donation or sponsorship
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="mod-write-us__link">
+                      I have a question about one of your promotions
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="mod-write-us__link">
+                      I have a complaint about one of your products
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="mod-write-us__link">
+                      Opt out for emails
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-pane" id="lets-talk__faq" role="tabpanel">
+                <p>
+                  We've tried to answer as many of your questions as possible.
+                  You can search them all here:
+                </p>
+                <p>&nbsp;</p>
+                
+                <details class="mod-faq__details-wrapper">
+                  <summary class="mod-faq__summary">
+                    Do Nestlé products in emerging countries have more salt than
+                    products in developed/developing countries?
+                  </summary>
+                  <div class="mod-faq__details">
+                    <p>
+                      For the last 15 years we’ve been working to reduce the
+                      sodium (which is the major component of salt) in our
+                      breakfast cereals across the world, because we want to
+                      keep on making them more nutritious. Achieving consistency
+                      on all products, in all countries, takes time - so some
+                      may have more sodium than others. Our aim is for all our
+                      cereals – globally – to have the same reduced levels of
+                      sodium, with a target of less than 135mg per serving in
+                      all our children’s products.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="mod-faq__details-wrapper">
+                  <summary class="mod-faq__summary">What are the health and nutritional benefits of Nestlé Gluten Free Corn Flakes?
+                  </summary>
+                  <div class="mod-faq__details">
+                    <p>As well as being a healthy choice for people who want to reduce the amount of gluten in their diet, or have coeliac disease or a gluten intolerance, Gluten Free Corn Flakes are fortified with B-vitamins, folic acid and iron
+
+                    </p>
+                  </div>
+                </details>
+
+                <details class="mod-faq__details-wrapper">
+                  <summary class="mod-faq__summary">
+                    How can I find foods made with whole grain?
+                  </summary>
+                  <div class="mod-faq__details">
+                    <p>Two things to remember: • Look for food labels where the word 'whole' appears in front of the name of the grain, like “whole wheat” or “wholemeal bread”. • For foods with more than one ingredient, make sure whole grain is listed towards the top of the ingredients list. The further up the list it is, the more whole grain has been used in the recipe. And look out for the percentage of whole grain. You should find this in the ingredients list too. It’s easy to know if a Nestlé breakfast cereal is made with whole grain: just look out for the Green Banner and whole grain tick on top of the box.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="mod-faq__details-wrapper">
+                  <summary class="mod-faq__summary">I’ve heard a low GI diet can help me lose weight. Is this true?
+                  </summary>
+                  <div class="mod-faq__details">
+                    <p>It’s too early to say. The science in this area is still emerging. There is evidence that low GI foods take longer to digest and help you feel satisfied for longer, but none that you’ll eat fewer calories at the next meal.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="mod-faq__details-wrapper">
+                  <summary class="mod-faq__summary">Why does Nestlé label vegetable oil?</summary>
+                  <div class="mod-faq__details">
+                    <p>Because it’s industry practice to label seasonal oils (oils that aren’t consistently available across the year). In Europe it’s now mandatory to detail the types of vegetable oils used in a food product. So it’s no longer permitted to use the term “vegetable oil” on a label.
+                    </p>
+                  </div>
+                </details>
+
+                <a href="#" class="mod-faq__show-all">Show all faqs</a>
+              </div>
+
+              <div class="tab-pane" id="lets-talk__in-person" role="tabpanel">
+                <img
+                  src="https://media3.giphy.com/media/e00xFKVVGeF4k/giphy.gif?cid=056bd1db6wbcuygquok3sqfjwzsjxnwwogbs4f998x9lxcho&rid=giphy.gif"
+                  alt="meow-wars"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -270,11 +473,8 @@
         maxime, architecto distinctio dolorum deserunt! Aperiam possimus eos
         eligendi!
       </p>
-
     </main>
-    
-    <footer></footer>
 
-    
+    <footer></footer>
   </body>
 </html>

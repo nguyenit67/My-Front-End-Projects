@@ -9,4 +9,12 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 1000,
   });
+
+  $(".lets-talk__tabbox").smartTab({
+    theme: "",
+    selected: 1
+  });
+
+  // fix this shit?
+  
 });

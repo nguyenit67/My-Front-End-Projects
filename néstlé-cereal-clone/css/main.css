@@ -43,3 +43,149 @@ a {
 img {
   max-width: 100%;
 }
+
+address,
+blockquote,
+dl,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  color: #333;
+  background-color: transparent;
+
+  transition: color 0.15s ease;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon::before {
+  position: relative;
+
+  font-family: Icons;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.icon--chat::before {
+  content: "\e913";
+}
+
+.icon--info::before {
+  content: "\e914";
+}
+
+.icon--contact::before {
+  content: "\e915";
+}
+
+/* h2.cross-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto 37px;
+  font-size: 1.5625rem;
+  color: #1f7a38;
+  text-align: center;
+
+  white-space: nowrap;
+} */
+
+h2.cross-heading.cross-heading {
+  max-width: 950px;
+  margin: 0 auto 37px;
+  display: flex;
+  justify-content: space-between;
+
+  color: #1f7a38;
+  white-space: nowrap;
+
+  font-family: NexaRustSans-Black;
+  font-size: 1.5625rem;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+h2,
+h2.cross-heading {
+  font-family: NexaRustSans-Black, sans-serif;
+}
+
+h2.cross-heading::after,
+h2.cross-heading::before {
+  display: block;
+  -ms-flex-negative: 90;
+  flex-shrink: 90;
+  position: relative;
+  width: 50%;
+  content: "";
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep-full-horizontal-green.png?v=375)
+    no-repeat;
+}
+
+h2.cross-heading:before {
+  background-position: left center;
+  border-radius: 0 2px 2px 0;
+}
+
+h2.cross-heading::before {
+  background-position: left center;
+  border-radius: 0 2px 2px 0;
+}
+
+h2.cross-heading::after {
+  background-position: right center;
+  border-radius: 0 2px 2px 0;
+}
+
+h2.cross-heading span {
+  display: block;
+  -ms-flex-positive: 5;
+  flex-grow: 5;
+  margin: 0 27px;
+
+  white-space: nowrap;
+}
+
+h2.cross-heading span i {
+  display: block;
+  margin-bottom: -6px;
+  font-family: NexaRustScript,sans-serif;
+  font-size: 1.875rem;
+  color: #bdb325;
+  white-space: nowrap;
+}
+
+a h1, a h2, a h3, a h4, a h5, a h6, h1, h2, h3, h4, h5, h6 {
+  font-family: NexaRustSans-Black,sans-serif;
+  font-weight: 100;
+  line-height: 1.2em;
+}

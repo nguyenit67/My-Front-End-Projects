@@ -31,7 +31,6 @@
   background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/borders/border-white-bottom.png?v=375);
 }
 
-
 .related-recipes__headline {
   display: flex;
   justify-content: space-between;
@@ -41,7 +40,7 @@
 
   font-family: NexaRustScript;
   font-size: 3.75rem;
-  line-height: .9em;
+  line-height: 0.9em;
 
   text-align: center;
   text-transform: capitalize;
@@ -53,9 +52,8 @@
 
   display: block;
   width: 30%;
-  background:
-    url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep-full-horizontal-green.png?v=375) no-repeat;
-
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep-full-horizontal-green.png?v=375)
+    no-repeat;
 }
 
 .related-recipes__headline::before {
@@ -64,13 +62,10 @@
 
 .related-recipes__headline::after {
   background-position: right center;
-
 }
-
 
 .related-recipes .row {
   justify-content: space-between;
-  
 }
 
 .related-recipes .col {
@@ -254,6 +249,241 @@ recipe__img-wrapper
   width: 320px;
   margin: 0;
   padding: 0;
-  transform: translateX( -50% );
-  
+  transform: translateX(-50%);
+}
+
+/* --------------------- LET'S TALK w/ TABS ------------------ */
+.lets-talk {
+  background: #fff;
+}
+
+.lets-talk::before {
+  content: "";
+  height: 15px;
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep-full-horizontal-white.png?v=375);
+}
+
+/* LETS TALK ---- HEADLINE */
+.lets-talk__headline.cross-heading {
+    margin-bottom: 57px;
+    max-width: 1120px;
+}
+
+/* LETS TALK ---- TAB */
+.lets-talk__tabbox {
+  padding: 5px 15px 50px;
+}
+/* tabnav menu */
+
+.lets-talk__tabmenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-flow: row nowrap;
+  margin-bottom: 55px;
+
+  list-style-type: none;
+}
+
+.lets-talk__tabmenu > * {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.lets-talk__tabmenu .nav-link {
+  position: relative;
+
+  display: block;
+  margin: 0;
+  padding: 10px 40px;
+  height: 100%;
+
+  color: #a5a5a5;
+  font-family: NexaRustSans-Black, sans-serif;
+  font-size: 1.25rem;
+}
+
+.lets-talk .icon {
+  font-size: 2.75rem;
+  transform: translateY(2px);
+}
+
+.lets-talk .icon::before {
+  top: 10px;
+}
+
+.lets-talk__tabmenu .nav-link:hover {
+  color: #1f7a38;
+  /* cursor: pointer; */
+}
+
+.lets-talk__tabmenu > * + * > .nav-link::before {
+  width: 2px;
+  height: 100%;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAABaBAMAAABgRZqNAAAALVBMVEWnp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6cAAACnp6feB68yAAAAD3RSTlNaamIyN0RMUnY8KyQcAAtYbLJmAAAAjklEQVQI1y3GP27BARzG4Yeh7dg0adNRO7RGRGIx+LEYEYvYiDD6k5gdASeQcAMmq1hcgRM4he8gTz55XzdXdxcnZztbR2W1p4O9oo6Zvm400Pbi01wD9DS1JAqqVpohLzFSj12beIvSFj78epWB+FkpP76jlLSMd//+fIWhVZhijIZWKMmHnIok2ihYPgCTfhuElaERvgAAAABJRU5ErkJggg==)
+    center bottom no-repeat;
+}
+
+.lets-talk__tabmenu .nav-link::after {
+  height: 2px;
+  width: 100%;
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep_full_horizontal_grey_fuzzy.png?v=375)
+    left center no-repeat;
+}
+
+.lets-talk__tabmenu .nav-link::before,
+.lets-talk__tabmenu .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.lets-talk__tabmenu .nav-link.active {
+  color: #1f7a38;
+}
+.lets-talk__tabmenu .nav-link.active::after {
+  background: none;
+}
+
+/* tab content */
+
+.lets-talk__tabbox > .tab-content {
+  height: 100% !important;
+}
+
+/* talk tab EACH spec CONTENT */
+.mod-write-us__link-list {
+  position: relative;
+  list-style-type: none;
+}
+
+.mod-write-us__link {
+  position: relative;
+  display: block;
+  padding: 13px 12px 12px 0;
+
+  font-size: 1.25rem;
+  font-family: NexaRustSans-Black, sans-serif;
+  text-transform: uppercase;
+}
+
+.mod-write-us__link-list::after,
+.mod-write-us__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep_full_horizontal_grey_fuzzy.png?v=375)
+    right top no-repeat;
+}
+
+.mod-write-us__link::after {
+  content: "\e904";
+  font-style: normal;
+  font-weight: 400;
+  font-family: Icons;
+  font-size: 1.9375rem;
+
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  margin-top: -23px;
+  color: #1f7a38;
+}
+
+.mod-write-us__link::before {
+  top: 0;
+}
+
+.mod-write-us__link-list::after {
+  bottom: 0;
+}
+
+/* faq faq fap fap fap */
+
+#lets-talk__faq {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .mod-faq__details-wrapper {
+
+} */
+
+.mod-faq__summary {
+  position: relative;
+  padding: 13px 20px 12px 0;
+  font-family: NexaRustSans-Black, sans-serif;
+  font-size: 1.25rem;
+  /* color: #000; */
+  outline: 0;
+}
+
+.mod-faq__summary:hover {
+  color: #1f7a38;
+}
+
+.mod-faq__summary::-webkit-details-marker {
+  display: none;
+}
+
+.mod-faq__summary:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: relative;
+  top: -13px;
+  left: 0;
+
+  background: url(https://www.nestle-cereals.com/uk/sites/all/themes/cpw/assets/brands/cpw/images/sep_full_horizontal_grey_fuzzy.png?v=375) right top no-repeat;
+}
+
+.mod-faq__summary::after {
+  content: "\e904";
+  font-style: normal;
+  font-weight: 400;
+  font-family: Icons;
+  font-size: 1.9375rem;
+
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  margin-top: -23px;
+  color: #1f7a38;
+
+  transition: all 0.2s ease;
+  transform: none;
+}
+
+[open] > .mod-faq__summary::after {
+  transform: rotate(90deg);
+}
+
+.mod-faq__details {
+  width: 81%;
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+.mod-faq__show-all {
+  align-self: flex-end;
+
+  /* display: inline-block; */
+  border: 2px solid #1f7a38;
+  padding: 8px 16px;
+  min-width: 237px;
+  margin-top: 34px;
+
+  color: #1f7a38;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 1.125rem;
+  line-height: 28px;
+  font-weight: 600;
+  font-family: "Myriad Pro", MyriadPro, sans-serif;
 }
